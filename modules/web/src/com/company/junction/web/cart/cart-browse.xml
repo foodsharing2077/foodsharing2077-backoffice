@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.junction.web.cart.CartBrowse"
+        focusComponent="cartsTable"
+        lookupComponent="cartsTable"
+        messagesPack="com.company.junction.web.cart">
+    <dsContext>
+        <groupDatasource id="cartsDs"
+                         class="com.company.junction.entity.Cart"
+                         view="cart-view">
+            <query>
+                <![CDATA[select e from junction$Cart e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="cartsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="cartsTable"
+                datasource="cartsDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="cartsTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="user"/>
+                <column id="addressBegin"/>
+                <column id="addressEnd"/>
+                <column id="status"/>
+            </columns>
+            <rows datasource="cartsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="cartsTable.create"/>
+                <button id="editBtn"
+                        action="cartsTable.edit"/>
+                <button id="removeBtn"
+                        action="cartsTable.remove"/>
+                <button id="routeСonfirmBtn"
+                        invoke="openRouteMap" caption="msg://select"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

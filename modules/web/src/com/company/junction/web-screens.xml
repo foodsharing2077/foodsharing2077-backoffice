@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <screen id="junction$Product.browse"
+            template="com/company/junction/web/product/product-browse.xml"/>
+    <screen id="junction$Product.edit"
+            template="com/company/junction/web/product/product-edit.xml"/>
+    <screen id="junction$Cart.browse"
+            template="com/company/junction/web/cart/cart-browse.xml"/>
+    <screen id="junction$Cart.edit"
+            template="com/company/junction/web/cart/cart-edit.xml"/>
+    <screen id="junction$Bonus.browse"
+            template="com/company/junction/web/bonus/bonus-browse.xml"/>
+    <screen id="junction$Bonus.edit"
+            template="com/company/junction/web/bonus/bonus-edit.xml"/>
+    <screen id="routeMapScreen"
+            template="com/company/junction/web/screens/routeMapScreen.xml"/>
+    <screen id="junction$Address.browse"
+            template="com/company/junction/web/address/address-browse.xml"/>
+    <screen id="junction$Address.edit"
+            template="com/company/junction/web/address/address-edit.xml"/>
+    <screen id="junction$CartMap.edit"
+            template="com/company/junction/web/cart/cart-map-edit.xml"/>
+    <screen id="junction$Map.edit"
+            template="com/company/junction/web/map/map-edit.xml"/>
+</screen-config>

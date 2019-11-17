@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.junction.web.bonus.BonusBrowse"
+        focusComponent="bonusesTable"
+        lookupComponent="bonusesTable"
+        messagesPack="com.company.junction.web.bonus">
+    <dsContext>
+        <groupDatasource id="bonusesDs"
+                         class="com.company.junction.entity.Bonus"
+                         view="_local">
+            <query>
+                <![CDATA[select e from junction$Bonus e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="bonusesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="bonusesTable"
+                datasource="bonusesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="bonusesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="count"/>
+            </columns>
+            <rows datasource="bonusesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="bonusesTable.create"/>
+                <button id="editBtn"
+                        action="bonusesTable.edit"/>
+                <button id="removeBtn"
+                        action="bonusesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

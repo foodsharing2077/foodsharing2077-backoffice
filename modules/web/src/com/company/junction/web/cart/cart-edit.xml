@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.company.junction.web.cart.CartEdit"
+        datasource="cartDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.junction.web.cart">
+    <dsContext>
+        <datasource id="cartDs"
+                    class="com.company.junction.entity.Cart"
+                    view="cart-view"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="cartDs">
+            <column width="250px">
+                <field property="user"/>
+                <field property="addressBegin"/>
+                <field property="addressEnd"/>
+                <field property="status"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

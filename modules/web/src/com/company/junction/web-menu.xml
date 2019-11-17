@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-junction"
+          insertBefore="administration">
+        <item screen="junction$Product.browse"/>
+        <item screen="junction$Cart.browse"/>
+        <item screen="junction$Bonus.browse"/>
+        <item screen="junction$Address.browse"/>
+        <item screen="routeMapScreen"/>
+    </menu>
+</menu-config>
